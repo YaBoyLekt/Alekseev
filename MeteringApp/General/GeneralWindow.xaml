@@ -1,0 +1,23 @@
+﻿<Window x:Class="MeteringApp.GeneralWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MeteringApp"
+        mc:Ignorable="d"
+        Title="Бухучет" Height="600" Width="1000" MinWidth="1000" MinHeight="600" x:Name="GeneralWindow1" >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+
+        <Image Source="/MeteringApp;component/Resources/Logo.jpg" VerticalAlignment="Center" HorizontalAlignment="Left"></Image>
+        <TextBlock Text="Бухучет" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30"></TextBlock>
+        <Button Height="30" Width="120" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10" Content="Назад" x:Name="BtnBack" Click="BtnBack_Click"></Button>
+        <Grid Background="#FFD3B188" Panel.ZIndex="-2"></Grid>
+        <Grid Grid.Row="2" Background="#FFD3B188"></Grid>
+        <Frame Focusable="False" NavigationUIVisibility="Hidden" Grid.Row="1" x:Name="MainFrame" ContentRendered="MainFrame_ContentRendered"></Frame>
+    </Grid>
+</Window>
